@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BachataOnline - Domina la Bachata Elegante</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Helvetica Neue', Arial, sans-serif; background:#140a1f; color:#fff; line-height:1.6; }
+  a { color:inherit; text-decoration:none; }
+  header.nav { display:flex; justify-content:space-between; align-items:center; padding:20px 6%; background:rgba(20,10,31,0.9); position:sticky; top:0; z-index:10; border-bottom:1px solid rgba(255,255,255,0.08); }
+  header.nav .logo { font-weight:bold; font-size:1.3rem; letter-spacing:1px; }
+  header.nav .login { border:1px solid rgba(255,255,255,0.4); padding:8px 18px; border-radius:30px; font-size:0.9rem; }
+
+  .hero { background:linear-gradient(135deg,#1a0b2e 0%,#6b1b4a 50%,#c2185b 100%); padding:90px 6% 70px; text-align:center; }
+  .hero h1 { font-size:2.6rem; max-width:720px; margin:0 auto 18px; }
+  .hero p { max-width:560px; margin:0 auto 30px; opacity:0.9; font-size:1.05rem; }
+  .hero .ctas a { display:inline-block; margin:0 8px; padding:14px 30px; border-radius:30px; font-weight:bold; }
+  .hero .ctas .primary { background:#fff; color:#6b1b4a; }
+  .hero .ctas .secondary { border:1px solid rgba(255,255,255,0.6); }
+
+  section { padding:70px 6%; max-width:1100px; margin:0 auto; }
+  section h2 { font-size:2rem; text-align:center; margin-bottom:10px; }
+  section > p.lead { text-align:center; max-width:640px; margin:0 auto 40px; opacity:0.85; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+  .card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:26px; }
+  .card h3 { font-size:1.1rem; margin-bottom:6px; }
+  .card .tag { color:#e879b0; font-size:0.85rem; font-weight:bold; margin-bottom:10px; display:block; }
+  .card p { opacity:0.85; font-size:0.95rem; }
+
+  .instructor-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:30px; max-width:420px; margin:0 auto; text-align:center; }
+  .instructor-card h3 { font-size:1.3rem; margin-bottom:6px; }
+  .instructor-card .loc { opacity:0.7; font-size:0.9rem; margin-bottom:14px; }
+  .badges { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:12px; }
+  .badges span { background:rgba(194,24,91,0.3); border-radius:20px; padding:6px 14px; font-size:0.8rem; }
+  .instructor-cta { text-align:center; margin-top:30px; }
+  .instructor-cta .btn { display:inline-block; background:#c2185b; padding:12px 26px; border-radius:30px; font-weight:bold; }
+
+  .plan-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:30px; }
+  .plan-card h3 { font-size:1.3rem; }
+  .plan-card .price { color:#e879b0; font-weight:bold; font-size:1.1rem; margin:8px 0 14px; }
+  .plan-card ul { list-style:none; margin:14px 0; }
+  .plan-card ul li { opacity:0.85; font-size:0.92rem; margin-bottom:6px; }
+  .plan-card .btn { display:inline-block; margin-top:10px; background:#fff; color:#6b1b4a; padding:10px 24px; border-radius:30px; font-weight:bold; font-size:0.9rem; }
+  .plan-card .note { margin-top:10px; font-size:0.8rem; opacity:0.7; }
+
+  .event-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:14px; padding:26px; }
+  .event-card .price { color:#e879b0; font-weight:bold; }
+  .event-card h3 { margin:6px 0; }
+  .event-card .meta { opacity:0.8; font-size:0.9rem; margin-bottom:14px; }
+  .event-card .actions a { display:inline-block; margin:4px 6px 0 0; padding:9px 16px; border-radius:24px; font-size:0.85rem; border:1px solid rgba(255,255,255,0.4); }
+  .event-card .actions .whatsapp { background:#25D366; border:none; color:#0a0a0a; }
+  .events-note { text-align:center; opacity:0.7; font-size:0.85rem; margin-top:20px; }
+
+  footer { background:#0d0614; padding:50px 6% 30px; text-align:center; }
+  footer .foot-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:60px; text-align:left; margin-bottom:30px; }
+  footer .foot-col h4 { margin-bottom:12px; font-size:1rem; }
+  footer .foot-col a, footer .foot-col p { display:block; opacity:0.8; font-size:0.9rem; margin-bottom:6px; }
+  footer .bottom { opacity:0.6; font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">BachataOnline</div>
+  <a class="login" href="mailto:mauricio.ardon@gmail.com">Iniciar sesión</a>
+</header>
+
+<section class="hero">
+  <h1>Domina la Bachata Online con Pasión y Estilo</h1>
+  <p>Aprende los secretos de la bachata sensual y elegante a tu propio ritmo, con lecciones de expertos y una comunidad que te apoya.</p>
+  <div class="ctas">
+    <a class="primary" href="#instructores">Conócenos</a>
+    <a class="secondary" href="#planes">Ver Planes</a>
+  </div>
+</section>
+
+<section id="curso">
+  <h2>Domina la Bachata Elegante</h2>
+  <p class="lead">48 lecciones de contenido, trabajadas por etapas. El avance se trabaja durante las sesiones del plan elegido, según tu nivel y ritmo de aprendizaje.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">10 lecciones</span>
+      <h3>Técnica Elegante</h3>
+      <p>Postura impecable, movimientos fluidos y control corporal que define la bachata elegante.</p>
+    </div>
+    <div class="card">
+      <span class="tag">12 lecciones</span>
+      <h3>Sensualidad y Expresión</h3>
+      <p>Aprende a transmitir emoción y elegancia en cada movimiento, conectando con la música.</p>
+    </div>
+    <div class="card">
+      <span class="tag">10 lecciones</span>
+      <h3>Variaciones Avanzadas</h3>
+      <p>Figuras sofisticadas y combinaciones elegantes para bailar con maestría.</p>
+    </div>
+    <div class="card">
+      <span class="tag">8 lecciones</span>
+      <h3>Improvisación Elegante</h3>
+      <p>Domina la improvisación manteniendo la elegancia y fluidez característica.</p>
+    </div>
+    <div class="card">
+      <span class="tag">8 lecciones</span>
+      <h3>Conexión en Pareja</h3>
+      <p>Técnicas de liderazgo y seguimiento para crear una conexión elegante y armoniosa.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Acceso total</span>
+      <h3>Comunidad Exclusiva</h3>
+      <p>Únete a bailarines elegantes que comparten tu pasión por la bachata refinada.</p>
+    </div>
+  </div>
+</section>
+
+<section id="instructores">
+  <h2>Conoce a tus instructores</h2>
+  <p class="lead">Conoce al equipo y consulta sus especialidades, modalidades de clase y ubicaciones disponibles.</p>
+  <div class="instructor-card">
+    <h3>Mauricio Ardón</h3>
+    <div class="loc">San Salvador, San Salvador &middot; Presencial</div>
+    <p>Instructor de bachata sensual y elegante. Clases presenciales en San Salvador.</p>
+    <div class="badges">
+      <span>Bachata Sensual</span>
+      <span>Bachata Elegante</span>
+      <span>Salsa</span>
+      <span>Merengue</span>
+    </div>
+  </div>
+  <div class="instructor-cta">
+    <p style="opacity:0.8; margin-bottom:14px;">¿Eres instructor de bachata? Únete a nuestra plataforma global.</p>
+    <a class="btn" href="mailto:mauricio.ardon@gmail.com?subject=Quiero%20ser%20instructor%20en%20BachataOnline.Dance">Quiero ser instructor en BachataOnline.Dance →</a>
+  </div>
+</section>
+
+<section id="planes">
+  <h2>Elige tu Modalidad de Clase</h2>
+  <p class="lead">Presencial, grupal u opciones externas online: encuentra el formato que acompaña tu ritmo de aprendizaje.</p>
+  <div class="grid">
+    <div class="plan-card">
+      <h3>Clase Presencial 1-a-1</h3>
+      <div class="price">Desde USD $45 / sesión</div>
+      <p>Atención personalizada. Planes de 1, 4 o 12 sesiones de 50 min.</p>
+      <ul>
+        <li>50 min por sesión</li>
+        <li>48 lecciones de contenido, trabajadas por etapas según tu nivel y ritmo.</li>
+      </ul>
+      <a class="btn" href="https://wa.me/50378545289?text=Quiero%20agendar%20una%20clase%20presencial%201-a-1">Agendar clase →</a>
+      <div class="note">Queremos conocer más de ti</div>
+    </div>
+    <div class="plan-card">
+      <h3>Clase Grupal</h3>
+      <div class="price">Desde USD $25 / sesión</div>
+      <p>Planes de 1, 8 o 24 clases de 50 min; dos horarios por semana en los planes mensual y trimestral.</p>
+      <ul>
+        <li>50 min por sesión</li>
+        <li>48 lecciones de contenido, trabajadas por etapas según tu nivel y ritmo.</li>
+      </ul>
+      <a class="btn" href="https://wa.me/50378545289?text=Quiero%20agendar%20una%20clase%20grupal">Agendar clase →</a>
+      <div class="note">Queremos conocer más de ti</div>
+    </div>
+    <div class="plan-card">
+      <h3>Clases online / virtuales</h3>
+      <div class="price">Opciones externas</div>
+      <p>Contenido propio próximamente. Explora academias externas mientras preparamos nuestro contenido. Visítalas sin registro previo.</p>
+      <a class="btn" href="#">Ver academias online →</a>
+    </div>
+  </div>
+</section>
+
+<section id="eventos">
+  <h2>Próximas Experiencias</h2>
+  <p class="lead">Competencias, presentaciones, talleres y sociales exclusivos diseñados para llevar tu baile al siguiente nivel.</p>
+  <div class="grid">
+    <div class="event-card">
+      <div class="price">USD $10.00</div>
+      <h3>Rooftop Salsa/Bachata San Salvador, El Salvador</h3>
+      <div class="meta">Cada martes, próximo: 10 de noviembre &middot; 20:00 - 00:00</div>
+      <div class="actions">
+        <a href="https://wa.me/50378545289?text=Quiero%20un%20lugar%20en%20Rooftop%20Salsa%2FBachata">Solicitar lugar</a>
+        <a href="#">Ubicación</a>
+        <a class="whatsapp" href="https://wa.me/?text=Rooftop%20Salsa%2FBachata%20San%20Salvador%2C%20cada%20martes%2020%3A00">Compartir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="event-card">
+      <div class="price">USD $5.00</div>
+      <h3>Viernes de Terapia Salsa / Bachata (Social)</h3>
+      <div class="meta">Cada viernes, próximo: 13 de noviembre &middot; 19:17 - 23:59</div>
+      <div class="actions">
+        <a href="https://wa.me/50378545289?text=Quiero%20un%20lugar%20en%20Viernes%20de%20Terapia">Solicitar lugar</a>
+        <a href="#">Ubicación</a>
+        <a class="whatsapp" href="https://wa.me/?text=Viernes%20de%20Terapia%20Salsa%2FBachata%2C%20cada%20viernes%2019%3A17">Compartir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <p class="events-note">Tu solicitud se registra antes de abrir WhatsApp. La reserva y el pago se confirman con el equipo de BachataOnline.</p>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-col">
+      <h4>BachataOnline</h4>
+      <p>Aprende bachata sensual y elegante desde cualquier lugar del mundo.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Enlaces Rápidos</h4>
+      <a href="#">Inicio</a>
+      <a href="#curso">El Curso</a>
+      <a href="#instructores">Instructores</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contacto</h4>
+      <p>+503 7854-5289</p>
+      <a href="mailto:mauricio.ardon@gmail.com">mauricio.ardon@gmail.com</a>
+      <p>San Salvador, El Salvador</p>
+    </div>
+  </div>
+  <div class="bottom">
+    &copy; 2026 BachataOnline. Todos los derechos reservados. &middot; Términos de Servicio &middot; Política de Privacidad &middot; Contacto
+  </div>
+</footer>
+
+</body>
+</html>
